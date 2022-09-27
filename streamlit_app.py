@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-#import plotly.express as px
+import plotly.express as px
 
 dfCalificaciones = pd.read_excel("tareas.xlsx")
 
@@ -14,6 +14,6 @@ dfResultados
 
 st.dataframe(dfResultados)
 
-#fig = px.bar(dfResultados, x='status', y=dfResultados["status"].value_counts())
+fig = px.bar(dfResultados, x='status', y=dfResultados["status"].value_counts())
 
-#st.plotly_chart(fig)
+st.plotly_chart(fig)
