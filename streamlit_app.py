@@ -14,6 +14,6 @@ dfResultados
 
 st.dataframe(dfResultados)
 
-fig = px.bar(dfResultados, x='status', y='dfResultados["status"].value_counts()')
+fig = px.bar(dfResultados, x=["Aprobado","Reprobado"], y=dfResultados["status"].value_counts())
 
 st.plotly_chart(fig)
